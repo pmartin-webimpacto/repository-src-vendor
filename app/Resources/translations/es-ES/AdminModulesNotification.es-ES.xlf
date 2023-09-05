@@ -74,6 +74,11 @@
         <target state="final">Has iniciado sesión correctamente en PrestaShop Addons.</target>
         <note>Line: 501</note>
       </trans-unit>
+      <trans-unit id="35a596598c0477aea67abfa33b044444" approved="yes">
+              <source>A total refund was successfully created.</source>
+              <target state="final">Reembolso total creado correctamente.</target>
+              <note>Line: 505</note>
+      </trans-unit>
       <trans-unit id="cf28eac3f0fdd7e3d2d705282948f2b9" approved="yes">
         <source>Error found : %1$s in country_module_list.xml file.</source>
         <target state="final">Error encontrado: %1$s en archivo country_module_list.xml.</target>
