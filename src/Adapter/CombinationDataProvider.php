@@ -101,6 +101,7 @@ class CombinationDataProvider
         $product = new Product($productId);
         $combinations = array();
 
+
         foreach ($combinationIds as $combinationId) {
             $combinations[$combinationId] = $this->completeCombination(
                 $product->getAttributeCombinationsById(

@@ -157,8 +157,8 @@ class CartPresenter implements PresenterInterface
 
         $rawProduct['total'] = $this->priceFormatter->format(
             $this->includeTaxes() ?
-                $rawProduct['total_wt'] :
-                $rawProduct['total']
+            $rawProduct['total_wt'] :
+            $rawProduct['total']
         );
 
         $rawProduct['quantity_wanted'] = $rawProduct['cart_quantity'];
@@ -328,7 +328,7 @@ class CartPresenter implements PresenterInterface
         $total_including_tax = $cart->getOrderTotal(true);
         $total_discount = $cart->getDiscountSubtotalWithoutGifts($this->includeTaxes());
         $totalCartAmount = $cart->getOrderTotal($this->includeTaxes(), Cart::ONLY_PRODUCTS);
-
+        
         $subtotals['products'] = array(
             'type' => 'products',
             'label' => $this->translator->trans('Subtotal', array(), 'Shop.Theme.Checkout'),
@@ -450,8 +450,6 @@ class CartPresenter implements PresenterInterface
             return !array_key_exists($discount['id_cart_rule'], $cartRulesIds);
         });
 
-        //dump($subtotals);
-
         return array(
             'products' => $products,
             'totals' => $totals,
@@ -523,9 +521,9 @@ class CartPresenter implements PresenterInterface
             }else{
                 $isPromo = 0;
             }
-
-            $vouchers[$cartVoucher['id_cart_rule']]['isPromo'] = $isPromo;
-
+            
+            $vouchers[$cartVoucher['id_cart_rule']]['isPromo'] = $isPromo; 
+            
             $vouchers[$cartVoucher['id_cart_rule']]['reduction_formatted'] = '-' . $cartVoucher['reduction_formatted'];
             $vouchers[$cartVoucher['id_cart_rule']]['delete_url'] = $this->link->getPageLink(
                 'cart',
